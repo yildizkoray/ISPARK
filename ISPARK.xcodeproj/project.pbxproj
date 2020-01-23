@@ -16,6 +16,7 @@
 		02135DBE23DA1EED00F573D7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02135DBB23DA1EED00F573D7 /* Alamofire.framework */; };
 		02135DC023DA1EED00F573D7 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02135DBC23DA1EED00F573D7 /* AlamofireObjectMapper.framework */; };
 		02135DC223DA1EED00F573D7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */; };
+		027A123723DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		02135DBB23DA1EED00F573D7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		02135DBC23DA1EED00F573D7 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIScrollView_InfiniteScroll.framework; path = Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02135DC223DA1EED00F573D7 /* ObjectMapper.framework in Frameworks */,
+				027A123723DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework in Frameworks */,
 				02135DBE23DA1EED00F573D7 /* Alamofire.framework in Frameworks */,
 				02135DC023DA1EED00F573D7 /* AlamofireObjectMapper.framework in Frameworks */,
 			);
@@ -80,6 +83,7 @@
 		02135DBA23DA1EED00F573D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */,
 				02135DBB23DA1EED00F573D7 /* Alamofire.framework */,
 				02135DBC23DA1EED00F573D7 /* AlamofireObjectMapper.framework */,
 				02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */,
@@ -166,6 +170,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputFileListPaths = (
@@ -174,6 +179,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UIScrollView_InfiniteScroll.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
