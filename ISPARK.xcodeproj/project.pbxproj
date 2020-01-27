@@ -17,6 +17,10 @@
 		02135DC023DA1EED00F573D7 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02135DBC23DA1EED00F573D7 /* AlamofireObjectMapper.framework */; };
 		02135DC223DA1EED00F573D7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */; };
 		027A123723DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */; };
+		02C0814523DF176D0074FFC9 /* ParkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814423DF176D0074FFC9 /* ParkItem.swift */; };
+		02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */; };
+		02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */; };
+		02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		02135DBC23DA1EED00F573D7 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIScrollView_InfiniteScroll.framework; path = Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework; sourceTree = "<group>"; };
+		02C0814423DF176D0074FFC9 /* ParkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItem.swift; sourceTree = "<group>"; };
+		02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemResponse.swift; sourceTree = "<group>"; };
+		02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemCell.swift; sourceTree = "<group>"; };
+		02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +77,9 @@
 		02135DA523DA1C6E00F573D7 /* ISPARK */ = {
 			isa = PBXGroup;
 			children = (
-				02135DA623DA1C6E00F573D7 /* AppDelegate.swift */,
-				02135DA823DA1C6E00F573D7 /* SceneDelegate.swift */,
-				02135DAA23DA1C6E00F573D7 /* ViewController.swift */,
-				02135DAC23DA1C6E00F573D7 /* Main.storyboard */,
-				02135DAF23DA1C6F00F573D7 /* Assets.xcassets */,
-				02135DB123DA1C6F00F573D7 /* LaunchScreen.storyboard */,
-				02135DB423DA1C6F00F573D7 /* Info.plist */,
+				02C0813E23DF16880074FFC9 /* AppDelegate */,
+				02C0813F23DF16B30074FFC9 /* Scenes */,
+				02C0814023DF16BF0074FFC9 /* Resources */,
 			);
 			path = ISPARK;
 			sourceTree = "<group>";
@@ -89,6 +93,86 @@
 				02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02C0813E23DF16880074FFC9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				02135DA623DA1C6E00F573D7 /* AppDelegate.swift */,
+				02135DA823DA1C6E00F573D7 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		02C0813F23DF16B30074FFC9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				02C0814223DF17480074FFC9 /* Home */,
+				02C0814123DF173E0074FFC9 /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		02C0814023DF16BF0074FFC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				02135DAF23DA1C6F00F573D7 /* Assets.xcassets */,
+				02135DB423DA1C6F00F573D7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		02C0814123DF173E0074FFC9 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				02135DB123DA1C6F00F573D7 /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		02C0814223DF17480074FFC9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				02C0814823DF1A450074FFC9 /* UI */,
+				02C0814323DF17550074FFC9 /* Models */,
+				02135DAA23DA1C6E00F573D7 /* ViewController.swift */,
+				02135DAC23DA1C6E00F573D7 /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		02C0814323DF17550074FFC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02C0814423DF176D0074FFC9 /* ParkItem.swift */,
+				02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02C0814823DF1A450074FFC9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				02C0814923DF1A4C0074FFC9 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		02C0814923DF1A4C0074FFC9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02C0814E23DF1E040074FFC9 /* ParkItemCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02C0814E23DF1E040074FFC9 /* ParkItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */,
+				02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */,
+			);
+			path = ParkItemCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +236,7 @@
 			files = (
 				02135DB323DA1C6F00F573D7 /* LaunchScreen.storyboard in Resources */,
 				02135DB023DA1C6F00F573D7 /* Assets.xcassets in Resources */,
+				02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */,
 				02135DAE23DA1C6E00F573D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,9 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
 				02135DAB23DA1C6E00F573D7 /* ViewController.swift in Sources */,
 				02135DA723DA1C6E00F573D7 /* AppDelegate.swift in Sources */,
+				02C0814523DF176D0074FFC9 /* ParkItem.swift in Sources */,
 				02135DA923DA1C6E00F573D7 /* SceneDelegate.swift in Sources */,
+				02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +432,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ISPARK/Info.plist;
+				INFOPLIST_FILE = ISPARK/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +454,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ISPARK/Info.plist;
+				INFOPLIST_FILE = ISPARK/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

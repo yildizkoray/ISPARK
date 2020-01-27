@@ -14,9 +14,16 @@ import UIScrollView_InfiniteScroll
 
 class ViewController: UIViewController {
 
-  @IBOutlet private weak var tableView: UITableView!
+  @IBOutlet private weak var tableView: UITableView! {
+    didSet {
+      tableView.register(
+        UINib(nibName: String(describing: ParkItemCell.self), bundle: nil),
+        forCellReuseIdentifier: ParkItemCell.identifer
+      )
+    }
+  }
 
-  private var parks: [Park] = [] {
+  private var parks: [ParkItem] = [] {
     didSet {
       tableView.reloadData()
     }
@@ -42,7 +49,7 @@ class ViewController: UIViewController {
 
     let url: URL = URL(string: "https://data.ibb.gov.tr\(next)")!
 
-    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkResponse>) in
+    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkItemResponse>) in
 
       switch response.result {
 
@@ -62,7 +69,7 @@ class ViewController: UIViewController {
   private func fetchPark() {
     let url: URL = URL(string: "https://data.ibb.gov.tr/api/3/action/datastore_search?resource_id=c3eb0d72-1ce4-4983-a3a8-6b0b4b19fcb9&limit=5")!
 
-    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkResponse>) in
+    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkItemResponse>) in
 
       switch response.result {
 
@@ -84,32 +91,11 @@ extension ViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-    cell.textLabel?.text = "Park Adı: \(parks[indexPath.row].name)"
-    cell.detailTextLabel?.text = "Park Adresi: \(parks[indexPath.row].location)"
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: ParkItemCell.identifer, for: indexPath) as? ParkItemCell else {
+      return UITableViewCell()
+    }
+
+    cell.configure(with: parks[indexPath.row])
     return cell
   }
 }
-
-public struct ParkResponse: ImmutableMappable {
-
-  let records: [Park]
-  let next: String
-
-  public init(map: Map) throws {
-    records = try map.value("result.records")
-    next = try map.value("result._links.next")
-  }
-}
-
-public struct Park: ImmutableMappable {
-
-  let name: String
-  let location: String
-
-  public init(map: Map) throws {
-    name = try map.value("Park Adi")
-    location = try map.value("Adres")
-  }
-}
-
