@@ -34,13 +34,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Xub-Rc-6h2"/>
                     <connections>
-                        <outlet property="tableView" destination="3dK-0v-H1g" id="5qk-bd-Tzj"/>
+                        <outlet property="tableView" destination="3dK-0v-H1g" id="jfd-pz-9w8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="599" y="9"/>
         </scene>
     </scenes>
 </document>

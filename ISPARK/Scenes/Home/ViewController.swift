@@ -14,6 +14,8 @@ import UIScrollView_InfiniteScroll
 
 class ViewController: UIViewController {
 
+  var hasNext: String = ""
+
   @IBOutlet private weak var tableView: UITableView! {
     didSet {
       tableView.register(
@@ -23,18 +25,33 @@ class ViewController: UIViewController {
     }
   }
 
+  let refreshControl : UIRefreshControl = {
+    let refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+    return refreshControl
+  }()
+
   private var parks: [ParkItem] = [] {
     didSet {
       tableView.reloadData()
     }
   }
 
-  var hasNext: String = ""
-
   override func viewDidLoad() {
     super.viewDidLoad()
-    fetchPark()
 
+    tableView.refreshControl = refreshControl
+    fetchPark()
+    prepareInfiniteScroll()
+  }
+
+  @objc func refresh() {
+    print("Handling refresh..")
+    parks.removeAll()
+    fetchPark()
+  }
+
+  fileprivate func prepareInfiniteScroll() {
     tableView.addInfiniteScroll { [unowned self] (tableView) in
       self.next(next: self.hasNext)
       tableView.finishInfiniteScroll()
@@ -44,46 +61,9 @@ class ViewController: UIViewController {
       return !self.hasNext.isEmpty
     }
   }
-
-  private func next(next: String){
-
-    let url: URL = URL(string: "https://data.ibb.gov.tr\(next)")!
-
-    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkItemResponse>) in
-
-      switch response.result {
-
-      case .success(let data):
-        print("Records: ", data)
-        self?.parks.append(contentsOf: data.records)
-        self?.hasNext = data.next
-        self?.tableView.reloadData()
-
-
-      case .failure(let error):
-        print(error)
-      }
-    }
-  }
-
-  private func fetchPark() {
-    let url: URL = URL(string: "https://data.ibb.gov.tr/api/3/action/datastore_search?resource_id=c3eb0d72-1ce4-4983-a3a8-6b0b4b19fcb9&limit=5")!
-
-    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkItemResponse>) in
-
-      switch response.result {
-
-      case .success(let data):
-        print("Records: ", data)
-        self?.parks = data.records
-        self?.hasNext = data.next
-
-      case .failure(let error):
-        print(error)
-      }
-    }
-  }
 }
+
+// MARK: - UITableViewDataSource
 
 extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,5 +77,54 @@ extension ViewController: UITableViewDataSource {
 
     cell.configure(with: parks[indexPath.row])
     return cell
+  }
+}
+
+extension ViewController: UITableViewDelegate {
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("Did clicked row at: \(indexPath.row)")
+  }
+}
+
+// MARK: - Network Operation
+
+extension ViewController {
+
+  private func next(next: String){
+
+    let url: URL = URL(string: "https://data.ibb.gov.tr\(next)")!
+
+    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkItemResponse>) in
+
+      switch response.result {
+
+      case .success(let data):
+        self?.parks.append(contentsOf: data.records)
+        self?.hasNext = data.next
+        self?.tableView.reloadData()
+
+      case .failure(let error):
+        print(error)
+      }
+    }
+  }
+
+  private func fetchPark() {
+    let url: URL = URL(string: "https://data.ibb.gov.tr/api/3/action/datastore_search?resource_id=c3eb0d72-1ce4-4983-a3a8-6b0b4b19fcb9&limit=16")!
+
+    AF.request(url).responseObject { [weak self] (response: AFDataResponse<ParkItemResponse>) in
+
+      switch response.result {
+
+      case .success(let data):
+        self?.parks = data.records
+        self?.hasNext = data.next
+        self?.refreshControl.endRefreshing()
+
+      case .failure(let error):
+        print(error)
+      }
+    }
   }
 }

@@ -12,6 +12,7 @@ class ParkItemCell: UITableViewCell {
 
   static let identifer = String(describing: self)
 
+  @IBOutlet private weak var icon: UIImageView!
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var subtitleLabel: UILabel!
 
@@ -26,5 +27,6 @@ class ParkItemCell: UITableViewCell {
   public func configure(with parkItem: ParkItem){
     titleLabel.text = parkItem.name
     subtitleLabel.text = parkItem.location
+    icon.image = UIImage(named: String(Int.random(in: 0..<6)))
   }
 }
