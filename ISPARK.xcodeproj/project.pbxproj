@@ -21,6 +21,7 @@
 		02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */; };
 		02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */; };
 		02FFF7A923E047F700E189A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7A823E047F700E189A9 /* SceneDelegate.swift */; };
+		02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AB23E0569200E189A9 /* HomeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemCell.swift; sourceTree = "<group>"; };
 		02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkItemCell.xib; sourceTree = "<group>"; };
 		02FFF7A823E047F700E189A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		02FFF7AB23E0569200E189A9 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		02C0814223DF17480074FFC9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				02FFF7AA23E0566D00E189A9 /* API */,
 				02C0814823DF1A450074FFC9 /* UI */,
 				02C0814323DF17550074FFC9 /* Models */,
 				02135DAA23DA1C6E00F573D7 /* ViewController.swift */,
@@ -173,6 +176,14 @@
 				02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */,
 			);
 			path = ParkItemCell;
+			sourceTree = "<group>";
+		};
+		02FFF7AA23E0566D00E189A9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				02FFF7AB23E0569200E189A9 /* HomeAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */,
 				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
 				02FFF7A923E047F700E189A9 /* SceneDelegate.swift in Sources */,
 				02135DAB23DA1C6E00F573D7 /* ViewController.swift in Sources */,
