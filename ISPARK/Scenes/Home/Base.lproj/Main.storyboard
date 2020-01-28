@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ISPARK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ISPARK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="599" y="9"/>
+            <point key="canvasLocation" x="-586" y="4"/>
+        </scene>
+        <!--Park Detail View Controller-->
+        <scene sceneID="jQg-Kb-AO9">
+            <objects>
+                <viewController storyboardIdentifier="ParkDetailViewController" id="mGL-zm-2pn" customClass="ParkDetailViewController" customModule="ISPARK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tkm-01-0G1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="19W-dS-tyh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mGL-zm-2pn" id="xEL-Oy-dUt"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="19W-dS-tyh" secondAttribute="trailing" id="95I-qM-nlx"/>
+                            <constraint firstAttribute="bottom" secondItem="19W-dS-tyh" secondAttribute="bottom" id="CJo-q6-e7P"/>
+                            <constraint firstItem="19W-dS-tyh" firstAttribute="top" secondItem="Tkm-01-0G1" secondAttribute="top" id="Cwm-T4-cYK"/>
+                            <constraint firstItem="19W-dS-tyh" firstAttribute="leading" secondItem="Tkm-01-0G1" secondAttribute="leading" id="Uyv-r1-Cnm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nWb-UG-Yg1"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="19W-dS-tyh" id="8jW-nP-U4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBm-wU-5wY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="3"/>
         </scene>
     </scenes>
 </document>

@@ -9,20 +9,14 @@
 import UIKit
 import UIScrollView_InfiniteScroll
 
-class ViewController: UIViewController {
+public final class HomeViewController: UIViewController, Storyboarded {
 
   let api = HomeAPI()
-
   var hasNext: String = ""
 
-  @IBOutlet private weak var tableView: UITableView! {
-    didSet {
-      tableView.register(
-        UINib(nibName: String(describing: ParkItemCell.self), bundle: nil),
-        forCellReuseIdentifier: ParkItemCell.identifer
-      )
-    }
-  }
+  weak var coordinator: HomeCoordinator?
+
+  @IBOutlet private weak var tableView: UITableView!
 
   let refreshControl : UIRefreshControl = {
     let refreshControl = UIRefreshControl()
@@ -36,11 +30,10 @@ class ViewController: UIViewController {
     }
   }
 
-  override func viewDidLoad() {
+  override public func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.refreshControl = refreshControl
-    prepareInfiniteScroll()
+    prepareTableView()
 
     api.fetctParks { [weak self] response in
       self?.parks = response.records
@@ -49,7 +42,7 @@ class ViewController: UIViewController {
   }
 
   @objc func refresh() {
-    print("Handling refresh..")
+
     parks.removeAll()
     api.fetctParks { [weak self] response in
       self?.parks = response.records
@@ -58,7 +51,17 @@ class ViewController: UIViewController {
     }
   }
 
+  fileprivate func prepareTableView() {
+    tableView.refreshControl = refreshControl
+    prepareInfiniteScroll()
+    tableView.register(
+      UINib(nibName: String(describing: ParkItemCell.self), bundle: nil),
+      forCellReuseIdentifier: ParkItemCell.identifer
+    )
+  }
+
   fileprivate func prepareInfiniteScroll() {
+
     tableView.addInfiniteScroll { [unowned self] (tableView) in
       self.api.next(next: self.hasNext) { [weak self] response in
         self?.parks.append(contentsOf: response.records)
@@ -75,12 +78,13 @@ class ViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 
-extension ViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HomeViewController: UITableViewDataSource {
+
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return parks.count
   }
 
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: ParkItemCell.identifer, for: indexPath) as? ParkItemCell else {
       return UITableViewCell()
     }
@@ -90,9 +94,9 @@ extension ViewController: UITableViewDataSource {
   }
 }
 
-extension ViewController: UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
 
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("Did clicked row at: \(indexPath.row)")
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    coordinator?.goDetailPage(with: parks[indexPath.row])
   }
 }
