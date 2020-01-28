@@ -54,6 +54,7 @@ class ViewController: UIViewController {
     api.fetctParks { [weak self] response in
       self?.parks = response.records
       self?.hasNext = response.next
+      self?.refreshControl.endRefreshing()
     }
   }
 
