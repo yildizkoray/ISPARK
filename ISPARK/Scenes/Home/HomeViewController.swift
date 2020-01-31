@@ -33,6 +33,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
   override public func viewDidLoad() {
     super.viewDidLoad()
 
+    prepareNavigation()
     prepareTableView()
 
     api.fetchParks { [weak self] response in
@@ -49,6 +50,14 @@ public final class HomeViewController: UIViewController, Storyboarded {
       self?.hasNext = response.next
       self?.refreshControl.endRefreshing()
     }
+  }
+
+  private func prepareNavigation() {
+    title = "ISPARKS"
+
+    let search = UISearchController(searchResultsController: nil)
+    search.searchBar.placeholder = "Park Ara"
+    navigationItem.searchController = search
   }
 
   fileprivate func prepareTableView() {
