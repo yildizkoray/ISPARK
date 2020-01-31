@@ -35,7 +35,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
 
     prepareTableView()
 
-    api.fetctParks { [weak self] response in
+    api.fetchParks { [weak self] response in
       self?.parks = response.records
       self?.hasNext = response.next
     }
@@ -44,7 +44,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
   @objc func refresh() {
 
     parks.removeAll()
-    api.fetctParks { [weak self] response in
+    api.fetchParks { [weak self] response in
       self?.parks = response.records
       self?.hasNext = response.next
       self?.refreshControl.endRefreshing()
