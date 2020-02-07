@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParkItemCell: UITableViewCell {
+public final class ParkItemCell: UITableViewCell {
 
   static let identifer = String(describing: self)
 
@@ -16,11 +16,11 @@ class ParkItemCell: UITableViewCell {
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var subtitleLabel: UILabel!
 
-    override func awakeFromNib() {
+  override public func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+  override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 

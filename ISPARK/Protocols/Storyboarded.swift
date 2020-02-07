@@ -9,14 +9,15 @@
 import UIKit
 
 public protocol Storyboarded {
-  static func instantiate(for name: String) -> Self
+  static func instantiate(for storyboard: UIStoryboard.Storyboard) -> Self
 }
 
-extension Storyboarded where Self: UIViewController {
+public extension Storyboarded where Self: UIViewController {
 
-  public static func instantiate(for name: String) -> Self {
+  static func instantiate(for storyboard: UIStoryboard.Storyboard) -> Self {
+
     let id = String(describing: self)
-    let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
+    let storyboard = UIStoryboard(name: storyboard.name, bundle: Bundle.main)
     return storyboard.instantiateViewController(withIdentifier: id) as! Self
   }
 }

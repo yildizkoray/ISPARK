@@ -11,7 +11,7 @@ import UIScrollView_InfiniteScroll
 
 public final class HomeViewController: UIViewController, Storyboarded {
 
-  let api = HomeAPI()
+  let api = HomeAPI(with: 15)
   var hasNext: String = ""
 
   weak var coordinator: HomeCoordinator?
@@ -54,10 +54,6 @@ public final class HomeViewController: UIViewController, Storyboarded {
 
   private func prepareNavigation() {
     title = "ISPARKS"
-
-    let search = UISearchController(searchResultsController: nil)
-    search.searchBar.placeholder = "Park Ara"
-    navigationItem.searchController = search
   }
 
   fileprivate func prepareTableView() {

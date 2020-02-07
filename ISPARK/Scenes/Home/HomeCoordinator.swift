@@ -17,13 +17,13 @@ public final class HomeCoordinator: Coordinator {
   }
 
   public func start() {
-    let view = HomeViewController.instantiate(for: "Main")
+    let view = HomeViewController.instantiate(for: .main)
     view.coordinator = self
     navigationController.pushViewController(view, animated: true)
   }
 
   public func goDetailPage(with item: ParkItem) {
-    let view = ParkDetailViewController.instantiate(for: "Main")
+    let view = ParkDetailViewController.instantiate(for: .main)
     view.item = item
     navigationController.pushViewController(view, animated: true)
   }
