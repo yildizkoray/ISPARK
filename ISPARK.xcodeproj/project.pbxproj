@@ -21,12 +21,28 @@
 		02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */; };
 		02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */; };
 		02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */; };
+		02F70F5223F2D91B008C2C67 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; };
+		02F70F5323F2D91B008C2C67 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AB23E0569200E189A9 /* HomeAPI.swift */; };
 		02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AE23E0619C00E189A9 /* Coordinator.swift */; };
 		02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B023E061B100E189A9 /* Storyboarded.swift */; };
 		02FFF7B323E063C200E189A9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */; };
 		02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		02F70F5423F2D91B008C2C67 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02F70F5323F2D91B008C2C67 /* Kingfisher.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0205962023ED94420009F512 /* UIStoryboard+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Additions.swift"; sourceTree = "<group>"; };
@@ -45,6 +61,7 @@
 		02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemResponse.swift; sourceTree = "<group>"; };
 		02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemCell.swift; sourceTree = "<group>"; };
 		02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkItemCell.xib; sourceTree = "<group>"; };
+		02F70F5123F2D91B008C2C67 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		02FFF7AB23E0569200E189A9 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		02FFF7AE23E0619C00E189A9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		02FFF7B023E061B100E189A9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -57,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F70F5223F2D91B008C2C67 /* Kingfisher.framework in Frameworks */,
 				02135DC223DA1EED00F573D7 /* ObjectMapper.framework in Frameworks */,
 				027A123723DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework in Frameworks */,
 				02135DBE23DA1EED00F573D7 /* Alamofire.framework in Frameworks */,
@@ -107,6 +125,7 @@
 		02135DBA23DA1EED00F573D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02F70F5123F2D91B008C2C67 /* Kingfisher.framework */,
 				027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */,
 				02135DBB23DA1EED00F573D7 /* Alamofire.framework */,
 				02135DBC23DA1EED00F573D7 /* AlamofireObjectMapper.framework */,
@@ -233,6 +252,7 @@
 				02135DA023DA1C6E00F573D7 /* Frameworks */,
 				02135DA123DA1C6E00F573D7 /* Resources */,
 				02135DC523DA1F0200F573D7 /* Carthage Copy Frameworks */,
+				02F70F5423F2D91B008C2C67 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -303,6 +323,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputFileListPaths = (
@@ -312,6 +333,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UIScrollView_InfiniteScroll.framework",
+				"$(DERIVED_FILE_DIR)/$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
