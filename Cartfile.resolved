@@ -1,5 +1,5 @@
-github "Alamofire/Alamofire" "5.0.0-rc.3"
-github "onevcat/Kingfisher" "5.13.0"
+github "Alamofire/Alamofire" "5.0.5"
+github "onevcat/Kingfisher" "5.13.3"
 github "pronebird/UIScrollView-InfiniteScroll" "1.1.0"
 github "tristanhimmelman/AlamofireObjectMapper" "6.3.0"
-github "tristanhimmelman/ObjectMapper" "3.5.1"
+github "tristanhimmelman/ObjectMapper" "3.5.2"
