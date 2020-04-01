@@ -28,6 +28,8 @@
 		02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B023E061B100E189A9 /* Storyboarded.swift */; };
 		02FFF7B323E063C200E189A9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */; };
 		02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */; };
+		CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */; };
+		CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E62434D510009BF7EE /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +69,8 @@
 		02FFF7B023E061B100E189A9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailViewController.swift; sourceTree = "<group>"; };
+		CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Endpoint.swift"; sourceTree = "<group>"; };
+		CA9A69E62434D510009BF7EE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				0205962023ED94420009F512 /* UIStoryboard+Additions.swift */,
+				CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 				02FFF7AD23E0618800E189A9 /* Protocols */,
 				02C0813F23DF16B30074FFC9 /* Scenes */,
 				02C0814023DF16BF0074FFC9 /* Resources */,
+				CA9A69E62434D510009BF7EE /* Endpoint.swift */,
 			);
 			path = ISPARK;
 			sourceTree = "<group>";
@@ -349,7 +355,9 @@
 				02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */,
 				02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */,
 				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
+				CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */,
 				02135DAB23DA1C6E00F573D7 /* HomeViewController.swift in Sources */,
+				CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */,
 				02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */,
 				0205962123ED94420009F512 /* UIStoryboard+Additions.swift in Sources */,
 				02135DA723DA1C6E00F573D7 /* AppDelegate.swift in Sources */,
