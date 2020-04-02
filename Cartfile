@@ -3,3 +3,4 @@ github "tristanhimmelman/ObjectMapper" ~> 3.5.1
 github "tristanhimmelman/AlamofireObjectMapper" ~> 6.2.0
 github "pronebird/UIScrollView-InfiniteScroll" ~> 1.1.0
 github "onevcat/Kingfisher" ~> 5.0
+github "konkab/AlamofireNetworkActivityLogger" ~> 3.0

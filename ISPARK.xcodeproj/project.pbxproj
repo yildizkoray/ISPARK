@@ -21,8 +21,6 @@
 		02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */; };
 		02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */; };
 		02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */; };
-		02F70F5223F2D91B008C2C67 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; };
-		02F70F5323F2D91B008C2C67 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AB23E0569200E189A9 /* HomeAPI.swift */; };
 		02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AE23E0619C00E189A9 /* Coordinator.swift */; };
 		02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B023E061B100E189A9 /* Storyboarded.swift */; };
@@ -30,16 +28,21 @@
 		02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */; };
 		CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */; };
 		CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E62434D510009BF7EE /* Endpoint.swift */; };
+		CAEBFC2524367E97007C7D75 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; };
+		CAEBFC2624367E97007C7D75 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAEBFC2824367EB9007C7D75 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */; };
+		CAEBFC2924367EB9007C7D75 /* AlamofireNetworkActivityLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		02F70F5423F2D91B008C2C67 /* Embed Frameworks */ = {
+		CAEBFC2724367E98007C7D75 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				02F70F5323F2D91B008C2C67 /* Kingfisher.framework in Embed Frameworks */,
+				CAEBFC2624367E97007C7D75 /* Kingfisher.framework in Embed Frameworks */,
+				CAEBFC2924367EB9007C7D75 /* AlamofireNetworkActivityLogger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailViewController.swift; sourceTree = "<group>"; };
 		CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Endpoint.swift"; sourceTree = "<group>"; };
 		CA9A69E62434D510009BF7EE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02F70F5223F2D91B008C2C67 /* Kingfisher.framework in Frameworks */,
 				02135DC223DA1EED00F573D7 /* ObjectMapper.framework in Frameworks */,
 				027A123723DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework in Frameworks */,
 				02135DBE23DA1EED00F573D7 /* Alamofire.framework in Frameworks */,
 				02135DC023DA1EED00F573D7 /* AlamofireObjectMapper.framework in Frameworks */,
+				CAEBFC2524367E97007C7D75 /* Kingfisher.framework in Frameworks */,
+				CAEBFC2824367EB9007C7D75 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,7 @@
 		02135DBA23DA1EED00F573D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */,
 				02F70F5123F2D91B008C2C67 /* Kingfisher.framework */,
 				027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */,
 				02135DBB23DA1EED00F573D7 /* Alamofire.framework */,
@@ -258,7 +264,7 @@
 				02135DA023DA1C6E00F573D7 /* Frameworks */,
 				02135DA123DA1C6E00F573D7 /* Resources */,
 				02135DC523DA1F0200F573D7 /* Carthage Copy Frameworks */,
-				02F70F5423F2D91B008C2C67 /* Embed Frameworks */,
+				CAEBFC2724367E98007C7D75 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,6 +336,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputFileListPaths = (
@@ -340,6 +347,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UIScrollView_InfiniteScroll.framework",
 				"$(DERIVED_FILE_DIR)/$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(DERIVED_FILE_DIR)/$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireNetworkActivityLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
