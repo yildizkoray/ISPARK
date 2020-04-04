@@ -39,26 +39,6 @@ public final class ParkItemCell: UITableViewCell {
 
     let imageId = String(Int.random(in: 0..<100))
     let url: URL = URL(string: "https://i.picsum.photos/id/\(imageId)/50/50.jpg")!
-
-    let resource = ImageResource(downloadURL: url)
-
-    if cache.isCached(forKey: resource.cacheKey) {
-
-      cache.retrieveImage(forKey: resource.cacheKey) { [weak self] result in
-
-        switch result {
-
-        case .success(let value):
-          self?.icon.image = value.image
-
-        case .failure(let error):
-          print(error)
-        }
-      }
-    }
-    else {
-      let processor = RoundCornerImageProcessor(cornerRadius: 20)
-      icon.kf.setImage(with: url, options: [.transition(.fade(0.2)), .processor(processor)])
-    }
+    icon.kf_setImage(with: url)
   }
 }

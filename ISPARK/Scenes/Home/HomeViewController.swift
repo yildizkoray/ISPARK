@@ -12,7 +12,7 @@ import UIScrollView_InfiniteScroll
 public final class HomeViewController: UIViewController, Storyboarded {
 
   let api = HomeAPI(with: 15)
-  var hasNext: String = ""
+  var nextURL: String = .empty
 
   weak var coordinator: HomeCoordinator?
 
@@ -24,7 +24,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
     return refreshControl
   }()
 
-  private var parks: [ParkItem] = [] {
+    private var parks: [ParkItem] = .empty() {
     didSet {
       tableView.reloadData()
     }
@@ -38,7 +38,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
 
     api.fetchParks { [weak self] response in
       self?.parks = response.records
-      self?.hasNext = response.next
+      self?.nextURL = response.next
     }
   }
 
@@ -47,7 +47,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
     parks.removeAll()
     api.fetchParks { [weak self] response in
       self?.parks = response.records
-      self?.hasNext = response.next
+      self?.nextURL = response.next
       self?.refreshControl.endRefreshing()
     }
   }
@@ -59,24 +59,21 @@ public final class HomeViewController: UIViewController, Storyboarded {
   fileprivate func prepareTableView() {
     tableView.refreshControl = refreshControl
     prepareInfiniteScroll()
-    tableView.register(
-      UINib(nibName: String(describing: ParkItemCell.self), bundle: nil),
-      forCellReuseIdentifier: ParkItemCell.identifer
-    )
+    tableView.registerCells(for: [ParkItemCell.self])
   }
 
   fileprivate func prepareInfiniteScroll() {
 
     tableView.addInfiniteScroll { [unowned self] (tableView) in
-      self.api.next(next: self.hasNext) { [weak self] response in
+      self.api.next(next: self.nextURL) { [weak self] response in
         self?.parks.append(contentsOf: response.records)
-        self?.hasNext = response.next
+        self?.nextURL = response.next
       }
       tableView.finishInfiniteScroll()
     }
 
     tableView.setShouldShowInfiniteScrollHandler { [unowned self] tableView -> Bool in
-      return !self.hasNext.isEmpty && !self.parks.isEmpty
+      return !self.nextURL.isEmpty && !self.parks.isEmpty
     }
   }
 }
@@ -90,10 +87,7 @@ extension HomeViewController: UITableViewDataSource {
   }
 
   public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    guard let cell = tableView.dequeueReusableCell(withIdentifier: ParkItemCell.identifer, for: indexPath) as? ParkItemCell else {
-      return UITableViewCell()
-    }
-
+    let cell: ParkItemCell = tableView.dequeueReusableCell(for: indexPath)
     cell.configure(with: parks[indexPath.row])
     return cell
   }

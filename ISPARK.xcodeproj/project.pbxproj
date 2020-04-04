@@ -20,12 +20,20 @@
 		02C0814523DF176D0074FFC9 /* ParkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814423DF176D0074FFC9 /* ParkItem.swift */; };
 		02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */; };
 		02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */; };
-		02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */; };
 		02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AB23E0569200E189A9 /* HomeAPI.swift */; };
 		02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AE23E0619C00E189A9 /* Coordinator.swift */; };
 		02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B023E061B100E189A9 /* Storyboarded.swift */; };
 		02FFF7B323E063C200E189A9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */; };
 		02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */; };
+		CA524AB82438DD6C00CCD69A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AB72438DD6C00CCD69A /* String+Additions.swift */; };
+		CA524ABA2438DE3D00CCD69A /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AB92438DE3D00CCD69A /* Array+Additions.swift */; };
+		CA524ABD2438DEDD00CCD69A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ABC2438DEDD00CCD69A /* API.swift */; };
+		CA524ABF2438F9B200CCD69A /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ABE2438F9B200CCD69A /* UIImageView+Kingfisher.swift */; };
+		CA524ACA2438FDDA00CCD69A /* IndexPath+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AC92438FDDA00CCD69A /* IndexPath+Additions.swift */; };
+		CA524ACC2438FE1700CCD69A /* Int+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ACB2438FE1700CCD69A /* Int+Additions.swift */; };
+		CA524ACE2438FF1000CCD69A /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ACD2438FF1000CCD69A /* UITableView+Additions.swift */; };
+		CA524AD02438FF7B00CCD69A /* UIResponder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ACF2438FF7B00CCD69A /* UIResponder+Additions.swift */; };
+		CA524AD42439058D00CCD69A /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA524AD32439058D00CCD69A /* ParkItemCell.xib */; };
 		CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */; };
 		CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E62434D510009BF7EE /* Endpoint.swift */; };
 		CAEBFC2524367E97007C7D75 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; };
@@ -65,13 +73,21 @@
 		02C0814423DF176D0074FFC9 /* ParkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItem.swift; sourceTree = "<group>"; };
 		02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemResponse.swift; sourceTree = "<group>"; };
 		02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemCell.swift; sourceTree = "<group>"; };
-		02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkItemCell.xib; sourceTree = "<group>"; };
 		02F70F5123F2D91B008C2C67 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		02FFF7AB23E0569200E189A9 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		02FFF7AE23E0619C00E189A9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		02FFF7B023E061B100E189A9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailViewController.swift; sourceTree = "<group>"; };
+		CA524AB72438DD6C00CCD69A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		CA524AB92438DE3D00CCD69A /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
+		CA524ABC2438DEDD00CCD69A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CA524ABE2438F9B200CCD69A /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		CA524AC92438FDDA00CCD69A /* IndexPath+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IndexPath+Additions.swift"; sourceTree = "<group>"; };
+		CA524ACB2438FE1700CCD69A /* Int+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Additions.swift"; sourceTree = "<group>"; };
+		CA524ACD2438FF1000CCD69A /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		CA524ACF2438FF7B00CCD69A /* UIResponder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Additions.swift"; sourceTree = "<group>"; };
+		CA524AD32439058D00CCD69A /* ParkItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkItemCell.xib; sourceTree = "<group>"; };
 		CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Endpoint.swift"; sourceTree = "<group>"; };
 		CA9A69E62434D510009BF7EE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
@@ -97,8 +113,11 @@
 		0205961F23ED94270009F512 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0205962023ED94420009F512 /* UIStoryboard+Additions.swift */,
+				CA524AB92438DE3D00CCD69A /* Array+Additions.swift */,
+				CA524AB72438DD6C00CCD69A /* String+Additions.swift */,
+				CA524ACB2438FE1700CCD69A /* Int+Additions.swift */,
 				CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */,
+				CA524AC02438FB4200CCD69A /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -124,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				02C0813E23DF16880074FFC9 /* AppDelegate */,
+				CA524ABB2438DE9800CCD69A /* RestAPI */,
 				0205961F23ED94270009F512 /* Extensions */,
 				02FFF7AD23E0618800E189A9 /* Protocols */,
 				02C0813F23DF16B30074FFC9 /* Scenes */,
@@ -157,8 +177,8 @@
 		02C0813F23DF16B30074FFC9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				02FFF7B423E0680000E189A9 /* ParkDetail */,
 				02C0814223DF17480074FFC9 /* Home */,
+				02FFF7B423E0680000E189A9 /* ParkDetail */,
 				02C0814123DF173E0074FFC9 /* Splash */,
 			);
 			path = Scenes;
@@ -206,24 +226,24 @@
 		02C0814823DF1A450074FFC9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				02C0814923DF1A4C0074FFC9 /* Views */,
+				02C0814923DF1A4C0074FFC9 /* View */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		02C0814923DF1A4C0074FFC9 /* Views */ = {
+		02C0814923DF1A4C0074FFC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				02C0814E23DF1E040074FFC9 /* ParkItemCell */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		02C0814E23DF1E040074FFC9 /* ParkItemCell */ = {
 			isa = PBXGroup;
 			children = (
 				02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */,
-				02C0814B23DF1A6D0074FFC9 /* ParkItemCell.xib */,
+				CA524AD32439058D00CCD69A /* ParkItemCell.xib */,
 			);
 			path = ParkItemCell;
 			sourceTree = "<group>";
@@ -251,6 +271,58 @@
 				02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */,
 			);
 			path = ParkDetail;
+			sourceTree = "<group>";
+		};
+		CA524ABB2438DE9800CCD69A /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CA524ABC2438DEDD00CCD69A /* API.swift */,
+			);
+			path = RestAPI;
+			sourceTree = "<group>";
+		};
+		CA524AC02438FB4200CCD69A /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CA524AC82438FDC600CCD69A /* IndexPath */,
+				CA524AC22438FBDA00CCD69A /* UIImage */,
+				CA524ACF2438FF7B00CCD69A /* UIResponder+Additions.swift */,
+				CA524AC12438FBCD00CCD69A /* UIStoryborad */,
+				CA524AC72438FD7800CCD69A /* UITableView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CA524AC12438FBCD00CCD69A /* UIStoryborad */ = {
+			isa = PBXGroup;
+			children = (
+				0205962023ED94420009F512 /* UIStoryboard+Additions.swift */,
+			);
+			path = UIStoryborad;
+			sourceTree = "<group>";
+		};
+		CA524AC22438FBDA00CCD69A /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				CA524ABE2438F9B200CCD69A /* UIImageView+Kingfisher.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		CA524AC72438FD7800CCD69A /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				CA524ACD2438FF1000CCD69A /* UITableView+Additions.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		CA524AC82438FDC600CCD69A /* IndexPath */ = {
+			isa = PBXGroup;
+			children = (
+				CA524AC92438FDDA00CCD69A /* IndexPath+Additions.swift */,
+			);
+			path = IndexPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +387,7 @@
 			files = (
 				02135DB323DA1C6F00F573D7 /* LaunchScreen.storyboard in Resources */,
 				02135DB023DA1C6F00F573D7 /* Assets.xcassets in Resources */,
-				02C0814D23DF1A6D0074FFC9 /* ParkItemCell.xib in Resources */,
+				CA524AD42439058D00CCD69A /* ParkItemCell.xib in Resources */,
 				02135DAE23DA1C6E00F573D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,10 +432,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA524ABA2438DE3D00CCD69A /* Array+Additions.swift in Sources */,
+				CA524ACA2438FDDA00CCD69A /* IndexPath+Additions.swift in Sources */,
+				CA524AB82438DD6C00CCD69A /* String+Additions.swift in Sources */,
 				02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */,
+				CA524AD02438FF7B00CCD69A /* UIResponder+Additions.swift in Sources */,
 				02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */,
 				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
 				CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */,
+				CA524ACC2438FE1700CCD69A /* Int+Additions.swift in Sources */,
+				CA524ABF2438F9B200CCD69A /* UIImageView+Kingfisher.swift in Sources */,
+				CA524ACE2438FF1000CCD69A /* UITableView+Additions.swift in Sources */,
 				02135DAB23DA1C6E00F573D7 /* HomeViewController.swift in Sources */,
 				CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */,
 				02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */,
@@ -372,6 +451,7 @@
 				02FFF7B323E063C200E189A9 /* HomeCoordinator.swift in Sources */,
 				02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */,
 				02C0814523DF176D0074FFC9 /* ParkItem.swift in Sources */,
+				CA524ABD2438DEDD00CCD69A /* API.swift in Sources */,
 				02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

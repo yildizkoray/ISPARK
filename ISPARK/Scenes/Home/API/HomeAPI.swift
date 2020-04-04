@@ -17,42 +17,24 @@ public protocol ParkItemProtocol {
 }
 
 public final class HomeAPI: ParkItemProtocol {
+    
+  let api: API = .shared
 
   public let limit: Int
 
   public init(with limit: Int) { self.limit = limit }
 
   public func fetchParks(completion: @escaping (ParkItemResponse) -> Void) {
-
-    let endpoint = Endpoint.parks(limit: limit)
-
-    AF.request(endpoint.url).responseObject { (response: AFDataResponse<ParkItemResponse>) in
-
-      switch response.result {
-      case .success(let data):
-        completion(data)
-
-      case .failure(let error):
-        print(error)
-
-      }
+    
+    api.request(endpoint: .parks()) { (response) in
+        completion(response)
     }
   }
 
-  public func next(next: String, completion: @escaping (ParkItemResponse) -> Void){
+  public func next(next: String, completion: @escaping (ParkItemResponse) -> Void) {
 
-    let endpoint = Endpoint.nextParks(next: next)
-
-    AF.request(endpoint.url).responseObject { (response: AFDataResponse<ParkItemResponse>) in
-
-      switch response.result {
-      case .success(let data):
-        completion(data)
-
-      case .failure(let error):
-        print(error)
-
-      }
+    api.request(endpoint: .parks(limit: limit)) { (response) in
+        completion(response)
     }
   }
 }
