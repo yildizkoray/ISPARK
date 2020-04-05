@@ -22,7 +22,7 @@ public final class HomeAPI: ParkItemProtocol {
 
   public let limit: Int
 
-  public init(with limit: Int) { self.limit = limit }
+  public init(limit: Int) { self.limit = limit }
 
   public func fetchParks(completion: @escaping (ParkItemResponse) -> Void) {
     
