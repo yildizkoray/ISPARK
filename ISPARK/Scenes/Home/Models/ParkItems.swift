@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-public struct ParkItemResponse: ImmutableMappable {
+public struct ParkItems: ImmutableMappable {
 
   let records: [ParkItem]
   let next: String

@@ -11,7 +11,7 @@ import Foundation
 public final class HomeViewModel {
     
     let api: HomeAPI!
-    let limit = 15
+    let limit = 5
     var hasNextPage: Bool = false
     var nextURL: String = .empty
     
@@ -19,21 +19,23 @@ public final class HomeViewModel {
         api = HomeAPI(limit: limit)
     }
     
-    public func parks(completion: @escaping (ParkItemResponse) -> Void) {
+    public func parks(completion: @escaping (ParkItemsDisplay) -> Void) {
         
         api.fetchParks { [weak self] response in
-            self?.hasNextPage = response.next.isNotEmpty
-            self?.nextURL = response.next
-            completion(response)
+            let display = ParkItemsDisplay(items: response)
+            self?.hasNextPage = display.next.isNotEmpty
+            self?.nextURL = display.next
+            completion(display)
         }
     }
     
-    public func next(completion: @escaping (ParkItemResponse) -> Void){
+    public func next(completion: @escaping (ParkItemsDisplay) -> Void){
         
         api.next(next: nextURL) { [weak self] response in
-            self?.hasNextPage = response.next.isNotEmpty
-            self?.nextURL = response.next
-            completion(response)
+            let display = ParkItemsDisplay(items: response)
+            self?.hasNextPage = display.next.isNotEmpty
+            self?.nextURL = display.next
+            completion(display)
         }
     }
 }

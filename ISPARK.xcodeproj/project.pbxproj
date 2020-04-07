@@ -18,13 +18,15 @@
 		02135DC223DA1EED00F573D7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */; };
 		027A123723DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */; };
 		02C0814523DF176D0074FFC9 /* ParkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814423DF176D0074FFC9 /* ParkItem.swift */; };
-		02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */; };
+		02C0814723DF17C20074FFC9 /* ParkItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814623DF17C20074FFC9 /* ParkItems.swift */; };
 		02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */; };
 		02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AB23E0569200E189A9 /* HomeAPI.swift */; };
 		02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7AE23E0619C00E189A9 /* Coordinator.swift */; };
 		02FFF7B123E061B100E189A9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B023E061B100E189A9 /* Storyboarded.swift */; };
 		02FFF7B323E063C200E189A9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */; };
 		02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */; };
+		CA0CD625243D286B0006A5C1 /* ParkItemDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CD624243D286B0006A5C1 /* ParkItemDisplay.swift */; };
+		CA0CD627243D29440006A5C1 /* ParkItemsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CD626243D29440006A5C1 /* ParkItemsDisplay.swift */; };
 		CA524AB82438DD6C00CCD69A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AB72438DD6C00CCD69A /* String+Additions.swift */; };
 		CA524ABA2438DE3D00CCD69A /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AB92438DE3D00CCD69A /* Array+Additions.swift */; };
 		CA524ABD2438DEDD00CCD69A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ABC2438DEDD00CCD69A /* API.swift */; };
@@ -72,7 +74,7 @@
 		02135DBD23DA1EED00F573D7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		027A123623DA32EB008A55CF /* UIScrollView_InfiniteScroll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIScrollView_InfiniteScroll.framework; path = Carthage/Build/iOS/UIScrollView_InfiniteScroll.framework; sourceTree = "<group>"; };
 		02C0814423DF176D0074FFC9 /* ParkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItem.swift; sourceTree = "<group>"; };
-		02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemResponse.swift; sourceTree = "<group>"; };
+		02C0814623DF17C20074FFC9 /* ParkItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItems.swift; sourceTree = "<group>"; };
 		02C0814A23DF1A6D0074FFC9 /* ParkItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemCell.swift; sourceTree = "<group>"; };
 		02F70F5123F2D91B008C2C67 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		02FFF7AB23E0569200E189A9 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		02FFF7B023E061B100E189A9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailViewController.swift; sourceTree = "<group>"; };
+		CA0CD624243D286B0006A5C1 /* ParkItemDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemDisplay.swift; sourceTree = "<group>"; };
+		CA0CD626243D29440006A5C1 /* ParkItemsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemsDisplay.swift; sourceTree = "<group>"; };
 		CA524AB72438DD6C00CCD69A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		CA524AB92438DE3D00CCD69A /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		CA524ABC2438DEDD00CCD69A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -116,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				CA524AB92438DE3D00CCD69A /* Array+Additions.swift */,
-				CA524AB72438DD6C00CCD69A /* String+Additions.swift */,
 				CA524ACB2438FE1700CCD69A /* Int+Additions.swift */,
+				CA524AB72438DD6C00CCD69A /* String+Additions.swift */,
 				CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */,
 				CA524AC02438FB4200CCD69A /* UIKit */,
 			);
@@ -207,8 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				02FFF7AA23E0566D00E189A9 /* API */,
-				02C0814823DF1A450074FFC9 /* UI */,
 				02C0814323DF17550074FFC9 /* Models */,
+				02C0814823DF1A450074FFC9 /* UI */,
 				02FFF7B223E063C200E189A9 /* HomeCoordinator.swift */,
 				02135DAA23DA1C6E00F573D7 /* HomeViewController.swift */,
 				CA7D87312439444F00E90134 /* HomeViewModel.swift */,
@@ -221,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				02C0814423DF176D0074FFC9 /* ParkItem.swift */,
-				02C0814623DF17C20074FFC9 /* ParkItemResponse.swift */,
+				02C0814623DF17C20074FFC9 /* ParkItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +233,7 @@
 		02C0814823DF1A450074FFC9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CA0CD623243D285A0006A5C1 /* Display */,
 				02C0814923DF1A4C0074FFC9 /* View */,
 			);
 			path = UI;
@@ -274,6 +279,15 @@
 				02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */,
 			);
 			path = ParkDetail;
+			sourceTree = "<group>";
+		};
+		CA0CD623243D285A0006A5C1 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				CA0CD624243D286B0006A5C1 /* ParkItemDisplay.swift */,
+				CA0CD626243D29440006A5C1 /* ParkItemsDisplay.swift */,
+			);
+			path = Display;
 			sourceTree = "<group>";
 		};
 		CA524ABB2438DE9800CCD69A /* RestAPI */ = {
@@ -442,6 +456,7 @@
 				02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */,
 				CA524AD02438FF7B00CCD69A /* UIResponder+Additions.swift in Sources */,
 				02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */,
+				CA0CD627243D29440006A5C1 /* ParkItemsDisplay.swift in Sources */,
 				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
 				CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */,
 				CA524ACC2438FE1700CCD69A /* Int+Additions.swift in Sources */,
@@ -453,10 +468,11 @@
 				0205962123ED94420009F512 /* UIStoryboard+Additions.swift in Sources */,
 				02135DA723DA1C6E00F573D7 /* AppDelegate.swift in Sources */,
 				02FFF7B323E063C200E189A9 /* HomeCoordinator.swift in Sources */,
+				CA0CD625243D286B0006A5C1 /* ParkItemDisplay.swift in Sources */,
 				02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */,
 				02C0814523DF176D0074FFC9 /* ParkItem.swift in Sources */,
 				CA524ABD2438DEDD00CCD69A /* API.swift in Sources */,
-				02C0814723DF17C20074FFC9 /* ParkItemResponse.swift in Sources */,
+				02C0814723DF17C20074FFC9 /* ParkItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

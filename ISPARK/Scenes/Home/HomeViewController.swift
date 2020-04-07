@@ -23,7 +23,7 @@ public final class HomeViewController: UIViewController, Storyboarded {
         return refreshControl
     }()
     
-    private var parks: [ParkItem] = .empty() {
+    private var display: ParkItemsDisplay = .empty {
         didSet {
             tableView.reloadData()
         }
@@ -35,16 +35,15 @@ public final class HomeViewController: UIViewController, Storyboarded {
         prepareNavigation()
         prepareTableView()
         
-        viewModel.parks { [weak self] response in
-            self?.parks = response.records
+        viewModel.parks { [weak self] display in
+            self?.display = display
         }
     }
     
     @objc func refresh() {
         
-        parks.removeAll()
-        viewModel.parks { [weak self] response in
-            self?.parks = response.records
+        viewModel.parks { [weak self] display in
+            self?.display = display
             self?.refreshControl.endRefreshing()
         }
     }
@@ -62,8 +61,8 @@ public final class HomeViewController: UIViewController, Storyboarded {
     fileprivate func prepareInfiniteScroll() {
         
         tableView.addInfiniteScroll { [unowned self] (tableView) in
-            self.viewModel.next { [weak self] response in
-                self?.parks.append(contentsOf: response.records)
+            self.viewModel.next { [weak self] display in
+                self?.display.items.append(contentsOf: display.items)
             }
             tableView.finishInfiniteScroll()
         }
@@ -79,12 +78,12 @@ public final class HomeViewController: UIViewController, Storyboarded {
 extension HomeViewController: UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parks.count
+        return display.items.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: ParkItemCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: parks[indexPath.row])
+        cell.configure(with: display.items[indexPath.row])
         return cell
     }
 }
@@ -92,6 +91,7 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        coordinator?.goDetailPage(with: parks[indexPath.row])
+        coordinator?.goDetailPage(with: display.items[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

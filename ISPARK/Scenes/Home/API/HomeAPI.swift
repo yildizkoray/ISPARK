@@ -12,8 +12,8 @@ import AlamofireObjectMapper
 
 public protocol ParkItemProtocol {
   var limit: Int { get }
-  func fetchParks(completion: @escaping (ParkItemResponse) -> Void)
-  func next(next: String, completion: @escaping (ParkItemResponse) -> Void)
+  func fetchParks(completion: @escaping (ParkItems) -> Void)
+  func next(next: String, completion: @escaping (ParkItems) -> Void)
 }
 
 public final class HomeAPI: ParkItemProtocol {
@@ -24,14 +24,14 @@ public final class HomeAPI: ParkItemProtocol {
 
   public init(limit: Int) { self.limit = limit }
 
-  public func fetchParks(completion: @escaping (ParkItemResponse) -> Void) {
+  public func fetchParks(completion: @escaping (ParkItems) -> Void) {
     
-    api.request(endpoint: .parks()) { (response) in
+    api.request(endpoint: .parks(limit: limit)) { (response) in
         completion(response)
     }
   }
 
-  public func next(next: String, completion: @escaping (ParkItemResponse) -> Void) {
+  public func next(next: String, completion: @escaping (ParkItems) -> Void) {
 
     api.request(endpoint: .parks(limit: limit)) { (response) in
         completion(response)

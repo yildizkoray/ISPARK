@@ -11,6 +11,13 @@ import Foundation
 public extension Array {
     
     static func empty() -> Array {
-      return []
+        return []
+    }
+    
+    mutating func append<T>(contentsOf newElements: T?) where T: Sequence, Element == T.Element {
+        
+        if let newElements = newElements {
+            append(contentsOf: newElements)
+        }
     }
 }
