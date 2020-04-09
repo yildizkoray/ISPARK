@@ -1,5 +1,5 @@
 //
-//  ParkDetailViewController.swift
+//  ParkMapViewController.swift
 //  ISPARK
 //
 //  Created by Koray Yildiz on 28.01.2020.
@@ -15,22 +15,29 @@ fileprivate struct Constant {
     static let longtitude: Double = 0.007
 }
 
-public final class ParkDetailViewController: UIViewController, Storyboarded {
+public final class ParkMapViewController: UIViewController, Storyboarded {
     
     @IBOutlet private weak var map: MKMapView!
     private var locationManager: CLLocationManager!
     
-    public var item: ParkItemDisplay?
+    public var viewModel: ParkMapViewModel!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        prepareAnnotation()
         prepareLocationManager()
         prepareNavigation()
     }
     
-    private func prepareNavigation() {
-        title = item?.title
+    private func prepareAnnotation() {
+        
+        let annotation = MKPointAnnotation()
+        let centerCoordinate = CLLocationCoordinate2D(latitude: viewModel.display.latitude,
+                                                      longitude: viewModel.display.longitude)
+        annotation.coordinate = centerCoordinate
+        annotation.title = viewModel.display.title
+        map.addAnnotation(annotation)
     }
     
     private func prepareLocationManager() {
@@ -42,35 +49,38 @@ public final class ParkDetailViewController: UIViewController, Storyboarded {
         locationManager.startUpdatingLocation()
     }
     
-    private func annotation() {
-        
-        let annotation = MKPointAnnotation()
-        let centerCoordinate = CLLocationCoordinate2D(latitude: (item?.latitude)!, longitude: (item?.longitude)!)
-        annotation.coordinate = centerCoordinate
-        annotation.title = item?.title
-        map.addAnnotation(annotation)
+    private func prepareNavigation() {
+        title = viewModel.display.title
     }
 }
 
 // MARK: - CLLocationManagerDelegate
 
-extension ParkDetailViewController: CLLocationManagerDelegate {
+extension ParkMapViewController: CLLocationManagerDelegate {
     
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let item = item else { return }
         
-        let center = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
+        let center = CLLocationCoordinate2D(latitude: viewModel.display.latitude, longitude: viewModel.display.longitude)
         let region = MKCoordinateRegion(
             center: center,
             span: MKCoordinateSpan(latitudeDelta: Constant.latitudeDelta, longitudeDelta: Constant.longtitude))
         
         self.map.setRegion(region, animated: true)
         
-        annotation()
+        
     }
     
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error.localizedDescription)")
+    }
+}
+
+// MARK: - MKMapViewDelegate
+
+extension ParkMapViewController: MKMapViewDelegate {
+    
+    public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print("Clicked annotation view: \(viewModel.display.title)")
     }
 }
 

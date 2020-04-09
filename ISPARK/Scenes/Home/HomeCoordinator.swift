@@ -22,9 +22,9 @@ public final class HomeCoordinator: Coordinator {
     navigationController.pushViewController(view, animated: true)
   }
 
-  public func goDetailPage(with item: ParkItemDisplay) {
-    let view = ParkDetailViewController.instantiate(for: .main)
-    view.item = item
+  public func goDetailPage(with display: ParkItemDisplay) {
+    let view = ParkMapViewController.instantiate(for: .main)
+    view.viewModel = ParkMapViewModel(with: display)
     navigationController.pushViewController(view, animated: true)
   }
 }

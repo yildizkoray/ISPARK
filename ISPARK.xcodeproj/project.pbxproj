@@ -27,6 +27,7 @@
 		02FFF7B623E0682500E189A9 /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */; };
 		CA0CD625243D286B0006A5C1 /* ParkItemDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CD624243D286B0006A5C1 /* ParkItemDisplay.swift */; };
 		CA0CD627243D29440006A5C1 /* ParkItemsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0CD626243D29440006A5C1 /* ParkItemsDisplay.swift */; };
+		CA342BDB243FC74400857C7A /* ParkMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA342BDA243FC74400857C7A /* ParkMapViewModel.swift */; };
 		CA524AB82438DD6C00CCD69A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AB72438DD6C00CCD69A /* String+Additions.swift */; };
 		CA524ABA2438DE3D00CCD69A /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524AB92438DE3D00CCD69A /* Array+Additions.swift */; };
 		CA524ABD2438DEDD00CCD69A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ABC2438DEDD00CCD69A /* API.swift */; };
@@ -84,6 +85,7 @@
 		02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDetailViewController.swift; sourceTree = "<group>"; };
 		CA0CD624243D286B0006A5C1 /* ParkItemDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemDisplay.swift; sourceTree = "<group>"; };
 		CA0CD626243D29440006A5C1 /* ParkItemsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkItemsDisplay.swift; sourceTree = "<group>"; };
+		CA342BDA243FC74400857C7A /* ParkMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkMapViewModel.swift; sourceTree = "<group>"; };
 		CA524AB72438DD6C00CCD69A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		CA524AB92438DE3D00CCD69A /* Array+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
 		CA524ABC2438DEDD00CCD69A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				02FFF7B523E0682500E189A9 /* ParkDetailViewController.swift */,
+				CA342BDA243FC74400857C7A /* ParkMapViewModel.swift */,
 			);
 			path = ParkDetail;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				CA0CD627243D29440006A5C1 /* ParkItemsDisplay.swift in Sources */,
 				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
 				CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */,
+				CA342BDB243FC74400857C7A /* ParkMapViewModel.swift in Sources */,
 				CA524ACC2438FE1700CCD69A /* Int+Additions.swift in Sources */,
 				CA524ABF2438F9B200CCD69A /* UIImageView+Kingfisher.swift in Sources */,
 				CA524ACE2438FF1000CCD69A /* UITableView+Additions.swift in Sources */,

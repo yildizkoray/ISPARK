@@ -22,7 +22,7 @@ public struct ParkItemDisplay {
     let longitude: Double
     let latitude: Double
     
-    public init(item: ParkItem){
+    public init(item: ParkItem) {
         
         self.icon = .randomIcon(width: Constants.iconWidth, height: Constants.iconHeight)
         self.title = item.name ?? .empty
@@ -31,4 +31,15 @@ public struct ParkItemDisplay {
         self.latitude = item.latitude ?? .zero
         
     }
+    
+    private init() {
+        
+        self.icon = .randomIcon(width: Constants.iconWidth, height: Constants.iconHeight)
+        self.title = .empty
+        self.subtitle = .empty
+        self.longitude = .zero
+        self.latitude = .zero
+    }
+    
+    static let empty = ParkItemDisplay()
 }
