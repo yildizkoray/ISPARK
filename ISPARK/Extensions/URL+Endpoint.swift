@@ -13,4 +13,10 @@ public extension URL {
     static func makeEndpoint(_ endpoint: String) -> URL {
         URL(string: "https://data.ibb.gov.tr\(endpoint)")!
     }
+    
+    static func randomIcon(width: Int, height: Int) -> URL {
+        let id = String(Int.random(in: 100 ... 500))
+        let url: URL = URL(string: "https://i.picsum.photos/id/\(id)/\(width)/\(height).jpg")!
+        return url
+    }
 }

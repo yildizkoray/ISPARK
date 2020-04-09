@@ -8,6 +8,12 @@
 
 import Foundation
 
+private struct Constants {
+    
+    static let iconWidth = 50
+    static let iconHeight = 50
+}
+
 public struct ParkItemDisplay {
     
     let icon: URL
@@ -17,10 +23,8 @@ public struct ParkItemDisplay {
     let latitude: Double
     
     public init(item: ParkItem){
-        let imageId = String(Int.random(in: 0..<100))
-        let url: URL = URL(string: "https://i.picsum.photos/id/\(imageId)/50/50.jpg")!
         
-        self.icon = url
+        self.icon = .randomIcon(width: Constants.iconWidth, height: Constants.iconHeight)
         self.title = item.name ?? .empty
         self.subtitle = item.location ?? .empty
         self.longitude = item.longitude ?? .zero

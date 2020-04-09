@@ -26,6 +26,11 @@ public final class ParkDetailViewController: UIViewController, Storyboarded {
         super.viewDidLoad()
         
         prepareLocationManager()
+        prepareNavigation()
+    }
+    
+    private func prepareNavigation() {
+        title = item?.title
     }
     
     private func prepareLocationManager() {
@@ -46,6 +51,8 @@ public final class ParkDetailViewController: UIViewController, Storyboarded {
         map.addAnnotation(annotation)
     }
 }
+
+// MARK: - CLLocationManagerDelegate
 
 extension ParkDetailViewController: CLLocationManagerDelegate {
     
