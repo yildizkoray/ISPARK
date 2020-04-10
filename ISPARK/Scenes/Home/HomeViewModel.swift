@@ -13,7 +13,11 @@ public final class HomeViewModel {
     let api: HomeAPI!
     let limit = 5
     var hasNextPage: Bool = false
-    var nextURL: String = .empty
+    var nextURL: String = .empty {
+        didSet {
+            hasNextPage = nextURL.isNotEmpty
+        }
+    }
     
     public init() {
         api = HomeAPI(limit: limit)
@@ -23,7 +27,6 @@ public final class HomeViewModel {
         
         api.fetchParks { [weak self] response in
             let display = ParkItemsDisplay(items: response)
-            self?.hasNextPage = display.next.isNotEmpty
             self?.nextURL = display.next
             completion(display)
         }
@@ -33,7 +36,6 @@ public final class HomeViewModel {
         
         api.next(next: nextURL) { [weak self] response in
             let display = ParkItemsDisplay(items: response)
-            self?.hasNextPage = display.next.isNotEmpty
             self?.nextURL = display.next
             completion(display)
         }
