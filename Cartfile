@@ -1,3 +1,6 @@
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json"
+
+
 github "Alamofire/Alamofire" ~> 5.0.0-rc.3
 github "tristanhimmelman/ObjectMapper" ~> 3.5.1
 github "tristanhimmelman/AlamofireObjectMapper" ~> 6.2.0

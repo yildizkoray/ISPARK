@@ -40,6 +40,7 @@
 		CA7D87322439444F00E90134 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7D87312439444F00E90134 /* HomeViewModel.swift */; };
 		CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */; };
 		CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E62434D510009BF7EE /* Endpoint.swift */; };
+		CAE22D2B2442704F00DF8D81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAE22D2A2442704F00DF8D81 /* GoogleService-Info.plist */; };
 		CAEBFC2524367E97007C7D75 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; };
 		CAEBFC2624367E97007C7D75 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAEBFC2824367EB9007C7D75 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */; };
@@ -98,6 +99,7 @@
 		CA7D87312439444F00E90134 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Endpoint.swift"; sourceTree = "<group>"; };
 		CA9A69E62434D510009BF7EE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CAE22D2A2442704F00DF8D81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 		02135DA523DA1C6E00F573D7 /* ISPARK */ = {
 			isa = PBXGroup;
 			children = (
+				CAE22D2A2442704F00DF8D81 /* GoogleService-Info.plist */,
 				02C0813E23DF16880074FFC9 /* AppDelegate */,
 				CA524ABB2438DE9800CCD69A /* RestAPI */,
 				0205961F23ED94270009F512 /* Extensions */,
@@ -407,6 +410,7 @@
 			files = (
 				02135DB323DA1C6F00F573D7 /* LaunchScreen.storyboard in Resources */,
 				02135DB023DA1C6F00F573D7 /* Assets.xcassets in Resources */,
+				CAE22D2B2442704F00DF8D81 /* GoogleService-Info.plist in Resources */,
 				CA524AD42439058D00CCD69A /* ParkItemCell.xib in Resources */,
 				02135DAE23DA1C6E00F573D7 /* Main.storyboard in Resources */,
 			);
