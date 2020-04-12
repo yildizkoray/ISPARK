@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireNetworkActivityLogger
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.makeKeyAndVisible()
 
     prepareNetworkLogger()
+    prepareFirebase()
 
     return true
   }
@@ -35,5 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func prepareNetworkLogger() {
         NetworkActivityLogger.shared.level = .debug
         NetworkActivityLogger.shared.startLogging()
+    }
+    
+    private func prepareFirebase() {
+        FirebaseApp.configure()
     }
 }
