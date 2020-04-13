@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>620380193062-0htmjn9d5kq3khd9ibj916aac8ddpm00.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.620380193062-0htmjn9d5kq3khd9ibj916aac8ddpm00</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDF9AydKAjYviV6GShqVX3CEogK9r7io_A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>620380193062</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.yildizkoray.ISPARK</string>
+	<key>PROJECT_ID</key>
+	<string>ispark-44b35</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ispark-44b35.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:620380193062:ios:cd1de2b7be58eb7fa6c1e7</string>
+	<key>DATABASE_URL</key>
+	<string>https://ispark-44b35.firebaseio.com</string>
+</dict>
+</plist>
