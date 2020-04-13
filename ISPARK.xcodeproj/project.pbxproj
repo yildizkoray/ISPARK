@@ -37,6 +37,7 @@
 		CA524ACE2438FF1000CCD69A /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ACD2438FF1000CCD69A /* UITableView+Additions.swift */; };
 		CA524AD02438FF7B00CCD69A /* UIResponder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA524ACF2438FF7B00CCD69A /* UIResponder+Additions.swift */; };
 		CA524AD42439058D00CCD69A /* ParkItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA524AD32439058D00CCD69A /* ParkItemCell.xib */; };
+		CA684B3B24444ECE001F1BF1 /* FirebaseCrashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA684B35244447A5001F1BF1 /* FirebaseCrashlytics.framework */; };
 		CA7D87322439444F00E90134 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7D87312439444F00E90134 /* HomeViewModel.swift */; };
 		CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */; };
 		CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9A69E62434D510009BF7EE /* Endpoint.swift */; };
@@ -110,6 +111,7 @@
 		CA524ACD2438FF1000CCD69A /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
 		CA524ACF2438FF7B00CCD69A /* UIResponder+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Additions.swift"; sourceTree = "<group>"; };
 		CA524AD32439058D00CCD69A /* ParkItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParkItemCell.xib; sourceTree = "<group>"; };
+		CA684B35244447A5001F1BF1 /* FirebaseCrashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCrashlytics.framework; path = Carthage/Build/iOS/FirebaseCrashlytics.framework; sourceTree = "<group>"; };
 		CA7D87312439444F00E90134 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Endpoint.swift"; sourceTree = "<group>"; };
 		CA9A69E62434D510009BF7EE /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				CA9FA032244393F500E3C4CF /* nanopb.framework in Frameworks */,
 				02135DC023DA1EED00F573D7 /* AlamofireObjectMapper.framework in Frameworks */,
 				CAEBFC2524367E97007C7D75 /* Kingfisher.framework in Frameworks */,
+				CA684B3B24444ECE001F1BF1 /* FirebaseCrashlytics.framework in Frameworks */,
 				CA9FA03C244393F500E3C4CF /* Firebase.framework in Frameworks */,
 				CA9FA04E2443ACA300E3C4CF /* PromisesObjC.framework in Frameworks */,
 				CAEBFC2824367EB9007C7D75 /* AlamofireNetworkActivityLogger.framework in Frameworks */,
@@ -208,6 +211,7 @@
 		02135DBA23DA1EED00F573D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA684B35244447A5001F1BF1 /* FirebaseCrashlytics.framework */,
 				CA9FA04D2443ACA300E3C4CF /* PromisesObjC.framework */,
 				CA9FA0492443948600E3C4CF /* libsqlite3.tbd */,
 				CA9FA0482443947B00E3C4CF /* libc++.tbd */,
@@ -704,6 +708,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = VALK7BP96F;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -731,6 +736,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = VALK7BP96F;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
