@@ -56,6 +56,8 @@
 		CA9FA04B244394A100E3C4CF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9FA0482443947B00E3C4CF /* libc++.tbd */; };
 		CA9FA04E2443ACA300E3C4CF /* PromisesObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9FA04D2443ACA300E3C4CF /* PromisesObjC.framework */; };
 		CA9FA04F2443ACA400E3C4CF /* PromisesObjC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9FA04D2443ACA300E3C4CF /* PromisesObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAA0A6F52447A9BB00D3EB29 /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0A6F42447A9BB00D3EB29 /* Bundle+Additions.swift */; };
+		CAA0A6F72447AA1B00D3EB29 /* ConfigReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA0A6F62447AA1B00D3EB29 /* ConfigReader.swift */; };
 		CAE22D2B2442704F00DF8D81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAE22D2A2442704F00DF8D81 /* GoogleService-Info.plist */; };
 		CAEBFC2524367E97007C7D75 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; };
 		CAEBFC2624367E97007C7D75 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02F70F5123F2D91B008C2C67 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -129,6 +131,8 @@
 		CA9FA0482443947B00E3C4CF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		CA9FA0492443948600E3C4CF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CA9FA04D2443ACA300E3C4CF /* PromisesObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromisesObjC.framework; path = Carthage/Build/iOS/PromisesObjC.framework; sourceTree = "<group>"; };
+		CAA0A6F42447A9BB00D3EB29 /* Bundle+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Additions.swift"; sourceTree = "<group>"; };
+		CAA0A6F62447AA1B00D3EB29 /* ConfigReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigReader.swift; sourceTree = "<group>"; };
 		CAE22D2A2442704F00DF8D81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAEBFC2024367C30007C7D75 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +177,7 @@
 				CA524AB72438DD6C00CCD69A /* String+Additions.swift */,
 				CA9A69E42434D4CA009BF7EE /* URL+Endpoint.swift */,
 				CA524AC02438FB4200CCD69A /* UIKit */,
+				CAA0A6F42447A9BB00D3EB29 /* Bundle+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,13 +202,14 @@
 		02135DA523DA1C6E00F573D7 /* ISPARK */ = {
 			isa = PBXGroup;
 			children = (
+				CA9A69E62434D510009BF7EE /* Endpoint.swift */,
+				CAA0A6F62447AA1B00D3EB29 /* ConfigReader.swift */,
 				02C0813E23DF16880074FFC9 /* AppDelegate */,
 				CA524ABB2438DE9800CCD69A /* RestAPI */,
 				0205961F23ED94270009F512 /* Extensions */,
 				02FFF7AD23E0618800E189A9 /* Protocols */,
 				02C0813F23DF16B30074FFC9 /* Scenes */,
 				02C0814023DF16BF0074FFC9 /* Resources */,
-				CA9A69E62434D510009BF7EE /* Endpoint.swift */,
 			);
 			path = ISPARK;
 			sourceTree = "<group>";
@@ -544,12 +550,14 @@
 				02FFF7AF23E0619C00E189A9 /* Coordinator.swift in Sources */,
 				CA524AD02438FF7B00CCD69A /* UIResponder+Additions.swift in Sources */,
 				02FFF7AC23E0569200E189A9 /* HomeAPI.swift in Sources */,
+				CAA0A6F72447AA1B00D3EB29 /* ConfigReader.swift in Sources */,
 				CA0CD627243D29440006A5C1 /* ParkItemsDisplay.swift in Sources */,
 				02C0814C23DF1A6D0074FFC9 /* ParkItemCell.swift in Sources */,
 				CA9A69E72434D510009BF7EE /* Endpoint.swift in Sources */,
 				CA342BDB243FC74400857C7A /* ParkMapViewModel.swift in Sources */,
 				CA524ACC2438FE1700CCD69A /* Int+Additions.swift in Sources */,
 				CA524ABF2438F9B200CCD69A /* UIImageView+Kingfisher.swift in Sources */,
+				CAA0A6F52447A9BB00D3EB29 /* Bundle+Additions.swift in Sources */,
 				CA524ACE2438FF1000CCD69A /* UITableView+Additions.swift in Sources */,
 				02135DAB23DA1C6E00F573D7 /* HomeViewController.swift in Sources */,
 				CA9A69E52434D4CA009BF7EE /* URL+Endpoint.swift in Sources */,
@@ -704,6 +712,7 @@
 		02135DB823DA1C6F00F573D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_URL = "https://data.ibb.gov.tr";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -732,6 +741,7 @@
 		02135DB923DA1C6F00F573D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_URL = "https://data.ibb.gov.tr";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

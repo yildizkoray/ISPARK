@@ -11,7 +11,8 @@ import Foundation
 public extension URL {
 
     static func makeEndpoint(_ endpoint: String) -> URL {
-        URL(string: "https://data.ibb.gov.tr\(endpoint)")!
+        let baseURL: String = ConfigReader.shared["Api URL"]
+        return URL(string: "\(baseURL)\(endpoint)")!
     }
     
     static func randomIcon(width: Int, height: Int) -> URL {
